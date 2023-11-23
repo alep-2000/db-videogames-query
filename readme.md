@@ -87,13 +87,17 @@ SELECT
 11- Selezionare il numero e la media delle recensioni per il videogioco con ID = 412 (review number = 12, avg_rating = 3.16 circa)
 
 ```sql
-
+    SELECT *
+    FROM `reviews`
+    WHERE videogame_id = 412;
 ```
 
 12- Selezionare il numero di videogame che la software house con ID = 1 ha rilasciato nel 2018 (13)
 
 ```sql
-
+    SELECT *
+    FROM `videogames`
+    WHERE software_house_id = 1 AND Year(release_date) = 2018;
 ```
 
 ---
