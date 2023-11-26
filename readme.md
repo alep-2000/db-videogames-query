@@ -288,10 +288,15 @@ JOIN
 10- Selezionare i dati della prima software house che ha rilasciato un gioco, assieme ai dati del gioco stesso (software house id : 5)
 
 ```sql
-
+    SELECT software_houses.id, software_houses.name as SHname,  videogames.name as videogame, videogames.release_date
+    FROM `software_houses`
+        JOIN videogames
+            ON software_houses.id = videogames.software_house_id
+    ORDER BY videogames.release_date
+    LIMIT 1;
 ```
 
-11- Selezionare i dati del videogame (id, name, release_date, totale recensioni) con piÃ¹ recensioni (videogame id : potrebbe uscire 449 o 398, sono entrambi a 20)
+11- Selezionare i dati del videogame (id, name, release_date, totale recensioni) con più recensioni (videogame id : potrebbe uscire 449 o 398, sono entrambi a 20)
 
 ```sql
 
